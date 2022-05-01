@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction private func exitInputSegue(segue: UIStoryboardSegue) {
-        if let add = segue.source as? SelectionPrefecturesViewController {
-            prefecturesLabel.text = add.selectedPrefectures
+        if let nextVC = segue.source as? SelectionPrefecturesViewController {
+            prefecturesLabel.text = nextVC.selectedPrefectures
         }
     }
 }
