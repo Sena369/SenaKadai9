@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KadaiChallenge9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-or-IFL">
+                                <rect key="frame" x="61" y="74" width="292.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都道府県" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOh-4Z-w84">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9Y-lp-Ycf">
+                                        <rect key="frame" x="128.5" y="0.0" width="52" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoG-GK-Dnm">
+                                        <rect key="frame" x="239.5" y="0.0" width="53" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="入力"/>
+                                        <connections>
+                                            <action selector="inputPrefecturesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THc-x4-Hyg"/>
+                                            <segue destination="GSo-1k-lXh" kind="presentation" identifier="InputSegue" id="N2w-Zn-si8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qt0-or-IFL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Of4-4F-xpg"/>
+                            <constraint firstItem="qt0-or-IFL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="teE-Ok-r3z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rm8-fr-XTg"/>
+                    <connections>
+                        <outlet property="prefecturesLabel" destination="m9Y-lp-Ycf" id="2S7-vT-S17"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="64"/>
+        </scene>
+        <!--Selection Prefectures View Controller-->
+        <scene sceneID="2Jb-EY-2PC">
+            <objects>
+                <viewController id="aum-yV-zUk" customClass="SelectionPrefecturesViewController" customModule="KadaiChallenge9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TRc-XG-FIS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="XUA-Zb-846">
+                                <rect key="frame" x="166.5" y="86" width="81.5" height="229"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4M-mi-Pld">
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="東京都"/>
+                                        <connections>
+                                            <action selector="tokyoButton:" destination="aum-yV-zUk" eventType="touchUpInside" id="WDb-Hh-ZWe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-0w-r5C">
+                                        <rect key="frame" x="0.0" y="66" width="81.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="神奈川県"/>
+                                        <connections>
+                                            <action selector="kanagawaButton:" destination="aum-yV-zUk" eventType="touchUpInside" id="B7D-DI-oyf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxT-DN-Ydh">
+                                        <rect key="frame" x="0.0" y="132" width="81.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="埼玉県"/>
+                                        <connections>
+                                            <action selector="saitamaButton:" destination="aum-yV-zUk" eventType="touchUpInside" id="bxK-O9-7tx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UF3-0I-IB0">
+                                        <rect key="frame" x="0.0" y="198" width="81.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="千葉県"/>
+                                        <connections>
+                                            <action selector="chibaButton:" destination="aum-yV-zUk" eventType="touchUpInside" id="2O9-AS-T5S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vuo-VS-rdC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XUA-Zb-846" firstAttribute="centerX" secondItem="TRc-XG-FIS" secondAttribute="centerX" id="NeX-gT-amz"/>
+                            <constraint firstItem="XUA-Zb-846" firstAttribute="top" secondItem="vuo-VS-rdC" secondAttribute="top" constant="30" id="P9t-R2-D4j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4mx-P7-z8a">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m9R-dR-14h">
+                            <connections>
+                                <action selector="cancelButton:" destination="aum-yV-zUk" id="Orl-bK-Vvy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="b3I-W5-sDN" kind="unwind" identifier="exitInputSegue" unwindAction="exitInputSegueWithSegue:" id="Ou7-7U-uGS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zso-Ga-wfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="b3I-W5-sDN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2931.8840579710145" y="56.919642857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nGf-1P-yVe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GSo-1k-lXh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TbD-eH-7wZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aum-yV-zUk" kind="relationship" relationship="rootViewController" id="r0R-iV-PuJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dp-UL-Y2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="62"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
