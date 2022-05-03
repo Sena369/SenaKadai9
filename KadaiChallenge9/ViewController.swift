@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var prefecturesLabel: UILabel!
+    @IBOutlet private weak var prefecturesLabel: UILabel!
+
     @IBAction func inputPrefecturesButton(_ sender: Any) {
     }
 
