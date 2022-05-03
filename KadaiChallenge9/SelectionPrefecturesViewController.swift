@@ -9,25 +9,29 @@ import UIKit
 
 class SelectionPrefecturesViewController: UIViewController {
 
-    var selectedPrefectures: String?
+    private(set) var selectedPrefectures: String?
 
     @IBAction func tokyoButton(_ sender: Any) {
-        performeSegue(prefectures: "東京都", sender: sender)
+        didSelectPrefecture(prefectures: "東京都", sender: sender)
     }
+
     @IBAction func kanagawaButton(_ sender: Any) {
-        performeSegue(prefectures: "神奈川県", sender: sender)
+        didSelectPrefecture(prefectures: "神奈川県", sender: sender)
     }
+
     @IBAction func saitamaButton(_ sender: Any) {
-        performeSegue(prefectures: "埼玉県", sender: sender)
+        didSelectPrefecture(prefectures: "埼玉県", sender: sender)
     }
+
     @IBAction func chibaButton(_ sender: Any) {
-        performeSegue(prefectures: "千葉県", sender: sender)
+        didSelectPrefecture(prefectures: "千葉県", sender: sender)
     }
+
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true)
     }
 
-    func performeSegue(prefectures: String, sender: Any) {
+    private func didSelectPrefecture(prefectures: String, sender: Any) {
         selectedPrefectures = prefectures
         performSegue(withIdentifier: "exitInputSegue", sender: sender)
     }
